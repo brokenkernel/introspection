@@ -67,6 +67,12 @@ android {
     buildTypes {
         release {
             isMinifyEnabled = true
+            if (successfulLoadProperties) {
+                signingConfig = signingConfigs.getByName("config")
+            }
+            ndk {
+                debugSymbolLevel = "FULL" // SYMBOL_TABLE - if it gets too big
+            }
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro",
