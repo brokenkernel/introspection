@@ -14,7 +14,7 @@ import androidx.compose.ui.res.stringResource
 import com.brokenkernel.introspection.infrastructure.IntrospectionDestinations
 
 @Composable
-internal fun MasterScaffold() {
+internal fun MasterScaffold(modifier: Modifier = Modifier) {
     var currentDestination by rememberSaveable { mutableStateOf(IntrospectionDestinations.HOME) }
 
     NavigationSuiteScaffold(
@@ -35,6 +35,7 @@ internal fun MasterScaffold() {
         },
         containerColor = MaterialTheme.colorScheme.primary,
         contentColor = MaterialTheme.colorScheme.onPrimary,
+        modifier = modifier
     ) {
         when (currentDestination) {
             IntrospectionDestinations.HOME -> HomeScreen()
@@ -44,5 +45,5 @@ internal fun MasterScaffold() {
 
 @Composable
 internal fun OuterContentForCoreIntrospection(modifier: Modifier = Modifier) {
-    MasterScaffold()
+    MasterScaffold(modifier)
 }
