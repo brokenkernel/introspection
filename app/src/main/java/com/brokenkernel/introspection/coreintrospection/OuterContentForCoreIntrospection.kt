@@ -1,17 +1,48 @@
 package com.brokenkernel.introspection.coreintrospection
 
-import androidx.compose.foundation.layout.Column
+import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
+import androidx.compose.material3.adaptive.navigationsuite.NavigationSuiteScaffold
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
+import com.brokenkernel.introspection.infrastructure.IntrospectionDestinations
 
 @Composable
-public fun OuterContentForCoreIntrospection(modifier: Modifier = Modifier) {
-    Column(modifier) {
-        Text(text = "Hallo")
-        Text(text = "Hallo")
-        Text(text = "Hallo")
-        Text(text = "Hallo")
-        Text(text = "Hallo")
+internal fun MasterScaffold() {
+    var currentDestination by rememberSaveable { mutableStateOf(IntrospectionDestinations.HOME) }
+
+    NavigationSuiteScaffold(
+        navigationSuiteItems = {
+            IntrospectionDestinations.entries.forEach {
+                item(
+                    icon = {
+                        Icon(
+                            it.icon,
+                            contentDescription = stringResource(it.contentDescription),
+                        )
+                    },
+                    label = { Text(stringResource(it.label)) },
+                    selected = it == currentDestination,
+                    onClick = { currentDestination = it },
+                )
+            }
+        },
+        containerColor = MaterialTheme.colorScheme.primary,
+        contentColor = MaterialTheme.colorScheme.onPrimary,
+    ) {
+        when (currentDestination) {
+            IntrospectionDestinations.HOME -> HomeScreen()
+        }
     }
+}
+
+@Composable
+internal fun OuterContentForCoreIntrospection(modifier: Modifier = Modifier) {
+    MasterScaffold()
 }
