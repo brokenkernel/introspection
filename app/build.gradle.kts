@@ -72,9 +72,11 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.navigation.safe.args.generator)
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
+    implementation(libs.io.github.raamcosta.composeDestinations.core)
     implementation(libs.material)
 
     debugImplementation(libs.androidx.ui.test.manifest)
@@ -86,4 +88,6 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.ui.test.junit4)
+
+    ksp(libs.io.github.raamcosta.composeDestinations.ksp)
 }
