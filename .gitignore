@@ -17,3 +17,4 @@ app/release/
 fastlane/README.md
 fastlane/metadata/
 fastlane/report.xml
+keystore.properties
