@@ -1,0 +1,2 @@
+json_key_file("/Users/eax/Library/CloudStorage/Dropbox/ApplicationData/AndroidStudioKeyDatum/introspection-cloud-b3ba63d9ddd5.json") # Path to the json secret file - Follow https://docs.fastlane.tools/actions/supply/#setup to get one
+package_name("com.brokenkernel.introspection") # e.g. com.krausefx.app
