@@ -195,8 +195,7 @@ internal fun HomeTab(modifier: Modifier = Modifier) {
                         Text(Build.ODM_SKU)
                     }
                 },
-
-                )
+            )
         }
     }
 }
