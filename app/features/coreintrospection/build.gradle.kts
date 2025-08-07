@@ -1,10 +1,12 @@
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
+    alias(libs.plugins.android.library)
     alias(libs.plugins.aboutLibraries)
-    alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.dependencyAnalysis)
+    alias(libs.plugins.dokka)
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.ksp)
     alias(libs.plugins.protobuf)
@@ -14,17 +16,14 @@ plugins {
 }
 
 android {
-    namespace = "com.brokenkernel.introspection"
+    namespace = "com.brokenkernel.introspection.features.coreintrospection"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.brokenkernel.introspection"
         minSdk = 26
-        targetSdk = 36
-        versionCode = 1
-        versionName = "0.0.$versionCode"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -37,8 +36,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_21
-        targetCompatibility = JavaVersion.VERSION_21
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
     kotlin {
         compilerOptions {
@@ -67,7 +66,6 @@ android {
 
 dependencies {
     implementation(platform(libs.androidx.compose.bom))
-    implementation(project(":app:features:coreintrospection"))
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.core.ktx)
@@ -78,13 +76,16 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.material)
 
-    debugImplementation(libs.androidx.ui.test.manifest)
     debugImplementation(libs.androidx.ui.tooling)
+
+    debugRuntimeOnly(libs.androidx.ui.test.manifest)
 
     testImplementation(libs.junit)
 
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.monitor)
     androidTestImplementation(libs.androidx.ui.test.junit4)
+    androidTestImplementation(libs.junit)
 }

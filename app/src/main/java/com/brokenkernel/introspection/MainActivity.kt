@@ -22,7 +22,7 @@ public class MainActivity : ComponentActivity() {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Greeting(
                         name = "Android",
-                        modifier = Modifier.padding(innerPadding)
+                        modifier = Modifier.padding(innerPadding),
                     )
                 }
             }
@@ -31,10 +31,13 @@ public class MainActivity : ComponentActivity() {
 }
 
 @Composable
-public fun Greeting(name: String, modifier: Modifier = Modifier) {
+public fun Greeting(
+    name: String,
+    modifier: Modifier = Modifier,
+) {
     Text(
         text = "Hello $name!",
-        modifier = modifier
+        modifier = modifier,
     )
 }
 
