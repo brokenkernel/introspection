@@ -7,11 +7,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import com.brokenkernel.introspection.ui.theme.IntrospectionTheme
+import com.brokenkernel.introspection.view.OuterContentForCoreIntrospection
 
 public class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,31 +18,9 @@ public class MainActivity : ComponentActivity() {
         setContent {
             IntrospectionTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding),
-                    )
+                    OuterContentForCoreIntrospection(Modifier.padding(innerPadding))
                 }
             }
         }
-    }
-}
-
-@Composable
-public fun Greeting(
-    name: String,
-    modifier: Modifier = Modifier,
-) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier,
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-public fun GreetingPreview() {
-    IntrospectionTheme {
-        Greeting("Android")
     }
 }
