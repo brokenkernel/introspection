@@ -67,7 +67,6 @@ android {
 
 dependencies {
     implementation(platform(libs.androidx.compose.bom))
-    implementation(project(":app:features:coreintrospection"))
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.core.ktx)

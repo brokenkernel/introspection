@@ -8,8 +8,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
+import com.brokenkernel.introspection.coreintrospection.OuterContentForCoreIntrospection
 import com.brokenkernel.introspection.ui.theme.IntrospectionTheme
-import com.brokenkernel.introspection.view.OuterContentForCoreIntrospection
 
 public class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

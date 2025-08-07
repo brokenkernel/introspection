@@ -1,4 +1,4 @@
-package com.brokenkernel.introspection.view
+package com.brokenkernel.introspection.coreintrospection
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.Text

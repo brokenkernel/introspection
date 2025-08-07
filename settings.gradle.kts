@@ -33,4 +33,3 @@ kover {
 
 rootProject.name = "introspection"
 include(":app")
-include(":app:features:coreintrospection")
