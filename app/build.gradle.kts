@@ -42,6 +42,7 @@ android {
         compilerOptions {
             jvmTarget = JvmTarget.JVM_21
         }
+        explicitApi()
     }
 
     compileOptions {
