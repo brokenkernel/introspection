@@ -14,3 +14,6 @@
 .cxx
 local.properties
 app/release/
+fastlane/README.md
+fastlane/metadata/
+fastlane/report.xml

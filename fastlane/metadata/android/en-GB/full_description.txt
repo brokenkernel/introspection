@@ -1,0 +1,2 @@
+Shows Debug and Introspective Information
+For example, shows Build, Camera, CPU, information accessible from the phone.
