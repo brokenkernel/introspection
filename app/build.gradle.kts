@@ -1,7 +1,7 @@
 import com.android.build.api.dsl.VariantDimension
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import java.io.IOException
 import java.util.Properties
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     alias(libs.plugins.aboutLibraries)
