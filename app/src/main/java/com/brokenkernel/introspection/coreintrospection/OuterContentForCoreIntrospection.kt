@@ -11,6 +11,8 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import com.brokenkernel.introspection.aboutapp.AboutTab
+import com.brokenkernel.introspection.aboutapp.LibrariesTab
 import com.brokenkernel.introspection.infrastructure.IntrospectionDestinations
 
 @Composable
@@ -38,7 +40,9 @@ internal fun MasterScaffold(modifier: Modifier = Modifier) {
         modifier = modifier,
     ) {
         when (currentDestination) {
-            IntrospectionDestinations.HOME -> HomeScreen()
+            IntrospectionDestinations.HOME -> HomeTab()
+            IntrospectionDestinations.LIBRARIES -> LibrariesTab()
+            IntrospectionDestinations.ABOUT -> AboutTab()
         }
     }
 }
