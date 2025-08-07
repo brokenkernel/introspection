@@ -35,7 +35,7 @@ internal fun MasterScaffold(modifier: Modifier = Modifier) {
         },
         containerColor = MaterialTheme.colorScheme.primary,
         contentColor = MaterialTheme.colorScheme.onPrimary,
-        modifier = modifier
+        modifier = modifier,
     ) {
         when (currentDestination) {
             IntrospectionDestinations.HOME -> HomeScreen()

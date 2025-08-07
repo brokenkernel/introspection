@@ -18,35 +18,35 @@ internal fun HomeScreen(modifier: Modifier = Modifier) {
             ListItem(
                 headlineContent = {
                     Text(text = "Hallo1")
-                }
+                },
             )
         }
         item {
             ListItem(
                 headlineContent = {
                     Text(text = "Hallo2")
-                }
+                },
             )
         }
         item {
             ListItem(
                 headlineContent = {
                     Text(text = "Hallo3")
-                }
+                },
             )
         }
         item {
             ListItem(
                 headlineContent = {
                     Text(text = "Hallo4")
-                }
+                },
             )
         }
         item {
             ListItem(
                 headlineContent = {
                     Text(text = "Hallo5")
-                }
+                },
             )
         }
     }
