@@ -7,14 +7,26 @@ import androidx.compose.material3.ListItem
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.platform.Clipboard
+import androidx.compose.ui.platform.LocalClipboard
+import androidx.compose.ui.platform.LocalConfiguration
 
 @Composable
 internal fun HomeTab(modifier: Modifier = Modifier) {
+    val localConfig = LocalConfiguration.current
+
+    val clipboard: Clipboard = LocalClipboard.current
+
     val listState = rememberLazyListState()
     LazyColumn(
         modifier = modifier,
         state = listState,
     ) {
+        stickyHeader {
+            Text("Build Data")
+        }
+
         item {
             ListItem(
                 headlineContent = {
@@ -175,5 +187,44 @@ internal fun HomeTab(modifier: Modifier = Modifier) {
                 },
             )
         }
+        item {
+            MinimumAPIListItemVersionS(
+                apiLevel = Build.VERSION_CODES.S,
+                datum = {
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                        Text(Build.ODM_SKU)
+                    }
+                },
+
+                )
+        }
     }
+}
+
+@Composable
+private fun MinimumAPIListItemVersionS(
+    apiLevel: Int,
+    modifier: Modifier = Modifier,
+    datum: @Composable () -> Unit,
+) {
+    val isValid = Build.VERSION.SDK_INT >= apiLevel
+    val currentModifier = if (isValid) {
+        modifier
+    } else {
+        Modifier.alpha(0.5f) // maybe a better way to describe "disabled" ?
+    }
+    ListItem(
+        headlineContent = {
+            Text("ODM_SKU")
+        },
+        supportingContent = {
+            if (isValid) {
+                datum()
+            }
+        },
+        trailingContent = {
+            Text("Minimum API ${Build.VERSION_CODES.S}")
+        },
+        modifier = currentModifier,
+    )
 }
