@@ -42,6 +42,7 @@ internal fun MasterScaffold(modifier: Modifier = Modifier) {
         when (currentDestination) {
             IntrospectionDestinations.HOME -> HomeTab()
             IntrospectionDestinations.LIBRARIES -> LibrariesTab()
+            IntrospectionDestinations.CAMERA2 -> Camera2Tab()
             IntrospectionDestinations.ABOUT -> AboutTab()
         }
     }
