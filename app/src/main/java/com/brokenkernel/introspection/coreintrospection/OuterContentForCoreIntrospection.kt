@@ -17,7 +17,7 @@ import com.brokenkernel.introspection.infrastructure.IntrospectionDestinations
 
 @Composable
 internal fun MasterScaffold(modifier: Modifier = Modifier) {
-    var currentDestination by rememberSaveable { mutableStateOf(IntrospectionDestinations.HOME) }
+    var currentDestination by rememberSaveable { mutableStateOf(IntrospectionDestinations.BUILD) }
 
     NavigationSuiteScaffold(
         navigationSuiteItems = {
@@ -40,7 +40,7 @@ internal fun MasterScaffold(modifier: Modifier = Modifier) {
         modifier = modifier,
     ) {
         when (currentDestination) {
-            IntrospectionDestinations.HOME -> HomeTab()
+            IntrospectionDestinations.BUILD -> BuildInfoTab()
             IntrospectionDestinations.LIBRARIES -> LibrariesTab()
             IntrospectionDestinations.CAMERA2 -> Camera2Tab()
             IntrospectionDestinations.ABOUT -> AboutTab()
