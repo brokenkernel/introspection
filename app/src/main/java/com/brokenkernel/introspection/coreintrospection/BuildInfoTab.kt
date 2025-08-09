@@ -13,12 +13,12 @@ import androidx.compose.ui.platform.Clipboard
 import androidx.compose.ui.platform.LocalClipboard
 import androidx.compose.ui.platform.LocalConfiguration
 import java.lang.reflect.Field
+import kotlin.reflect.full.memberProperties
 
 @Composable
 internal fun BuildInfoTab(modifier: Modifier = Modifier) {
-    val localConfig = LocalConfiguration.current
-
     val clipboard: Clipboard = LocalClipboard.current
+    val localConfig = LocalConfiguration.current
 
     val buildClass = Build::class
     val buildClassConstants = buildClass.java.declaredFields
@@ -49,7 +49,24 @@ internal fun BuildInfoTab(modifier: Modifier = Modifier) {
                     }
                 },
             )
+        }
 
+        stickyHeader {
+            Text("Local Config")
+        }
+
+        val localConfigConstants = localConfig::class.memberProperties.toList()
+
+        items(localConfigConstants) { lc ->
+            ListItem(
+                headlineContent = {
+                    Text(lc.name)
+                },
+                supportingContent = {
+                    val stringifiedConstantValue = lc.getter.call(localConfig).toString()
+                    Text(stringifiedConstantValue)
+                },
+            )
         }
     }
 }

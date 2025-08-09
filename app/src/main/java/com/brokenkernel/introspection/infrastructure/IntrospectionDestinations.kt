@@ -18,6 +18,4 @@ internal enum class IntrospectionDestinations(
     CAMERA2(R.string.camera, Icons.Default.Camera, R.string.camera),
     ABOUT(R.string.about, Icons.Default.Info, R.string.about),
     LIBRARIES(R.string.licences, Icons.Default.Copyright, R.string.licences),
-
-
 }
