@@ -138,6 +138,9 @@ dependencies {
 
     ksp(libs.hilt.compiler)
     ksp(libs.io.github.raamcosta.composeDestinations.ksp)
+
+    lintChecks(libs.androidx.lint.gradle)
+    lintChecks(libs.slack.lint.checks)
 }
 
 tasks.withType<DependencyUpdatesTask> {
