@@ -14,7 +14,7 @@ internal enum class IntrospectionDestinations(
     val icon: ImageVector,
     @param:StringRes val contentDescription: Int,
 ) {
-    BUILD(R.string.home, Icons.Default.Build, R.string.home),
+    BUILD(R.string.build, Icons.Default.Build, R.string.build),
     CAMERA2(R.string.camera, Icons.Default.Camera, R.string.camera),
     ABOUT(R.string.about, Icons.Default.Info, R.string.about),
     LIBRARIES(R.string.licences, Icons.Default.Copyright, R.string.licences),

@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">introspection</string>
-    <string name="title_activity_main">MainActivity</string>
-    <string name="home">Home</string>
+    <string name="app_name">Introspection Tools</string>
+    <string name="title_activity_main">Introspection Tools</string>
+    <string name="build">Build</string>
     <string name="about">About</string>
     <string name="licences">Licences</string>
     <string name="camera">Camera</string>
