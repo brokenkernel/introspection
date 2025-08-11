@@ -125,6 +125,7 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.io.github.raamcosta.composeDestinations.core)
+    implementation(libs.androidx.camera.lifecycle)
 
     debugImplementation(libs.androidx.ui.test.manifest)
     debugImplementation(libs.androidx.ui.tooling)

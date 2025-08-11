@@ -1,5 +1,6 @@
 package com.brokenkernel.introspection.coreintrospection
 
+import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material3.Text
@@ -9,6 +10,8 @@ import androidx.compose.ui.Modifier
 @Composable
 internal fun Camera2Tab(modifier: Modifier = Modifier) {
     val listState = rememberLazyListState()
+//    val cameraProviderFuture = ProcessCameraProvider.getInstance(this)
+
     LazyColumn(
         modifier = modifier,
         state = listState,
