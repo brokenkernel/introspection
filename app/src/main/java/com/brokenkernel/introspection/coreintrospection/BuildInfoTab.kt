@@ -12,6 +12,7 @@ import androidx.compose.ui.platform.Clipboard
 import androidx.compose.ui.platform.LocalClipboard
 import androidx.compose.ui.platform.LocalConfiguration
 import java.lang.reflect.Field
+import kotlin.reflect.KClass
 import kotlin.reflect.full.memberProperties
 
 @Composable
@@ -62,8 +63,22 @@ internal fun BuildInfoTab(modifier: Modifier = Modifier) {
                     Text(lc.name)
                 },
                 supportingContent = {
+                    val isEnum = (lc.returnType.classifier as KClass<*>).java.isEnum
                     val stringifiedConstantValue = lc.getter.call(localConfig).toString()
                     Text(stringifiedConstantValue)
+
+                    if (isEnum) {
+                        val asInt = stringifiedConstantValue.toInt()
+
+                        val entries = lc::class.java.enumConstants
+                        val enumValue = entries[asInt].toString()
+//                        parseEnum(lc.javaField!!.type as Class<Enum<*>>,
+//                        val wat = lc.getter.call(localConfig)
+//                        entries.
+//                        val enumNameFormat = value.uppercase().replace(" ", "_")
+//
+                        Text("[$enumValue]")
+                    }
                 },
             )
         }
