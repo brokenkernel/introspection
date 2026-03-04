@@ -84,12 +84,6 @@ android {
         sourceCompatibility = JavaVersion.VERSION_21
         targetCompatibility = JavaVersion.VERSION_21
     }
-    kotlin {
-        compilerOptions {
-            jvmTarget = JvmTarget.JVM_21
-        }
-        explicitApi()
-    }
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_21
@@ -107,6 +101,13 @@ android {
     lint {
         baseline = file("lint-baseline.xml")
     }
+}
+
+kotlin {
+    compilerOptions {
+        jvmTarget = JvmTarget.JVM_21
+    }
+    explicitApi()
 }
 
 dependencies {
@@ -151,7 +152,7 @@ tasks.withType<DependencyUpdatesTask> {
 }
 
 ktlint {
-    version.set("1.7.1")
+    version.set("1.8.0")
 }
 
 fun isNonStable(version: String): Boolean {

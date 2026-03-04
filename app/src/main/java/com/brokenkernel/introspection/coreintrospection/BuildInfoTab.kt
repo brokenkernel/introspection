@@ -42,7 +42,9 @@ internal fun BuildInfoTab(modifier: Modifier = Modifier) {
                     } else {
                         val stringifiedConstantValue: String = when (buildConstant.type) {
                             java.lang.String::class.java -> buildConstant.get(String)?.toString().orEmpty()
+
 //                            java.lang.Int::class.java -> buildConstant.getInt(Int).toString()
+
                             else -> buildConstant.type.toString() + " TODO"
                         }
                         Text(stringifiedConstantValue)
