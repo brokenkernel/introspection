@@ -19,17 +19,8 @@ dependencyResolutionManagement {
     }
 }
 
-plugins {
-    id("org.jetbrains.kotlinx.kover.aggregation") version "0.9.1"
-}
-
 enableFeaturePreview("STABLE_CONFIGURATION_CACHE")
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
-
-kover {
-    enableCoverage()
-}
-
 
 rootProject.name = "introspection"
 include(":app")
