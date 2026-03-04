@@ -6,7 +6,6 @@ plugins {
     alias(libs.plugins.android.lint) apply false
     alias(libs.plugins.dagger.hilt.android) apply false
     alias(libs.plugins.dependencyAnalysis)
-    alias(libs.plugins.dokka)
     alias(libs.plugins.google.gms.google.services) apply false
     alias(libs.plugins.jetbrains.kotlin.jvm) apply false
     alias(libs.plugins.kotlin.android) apply false
