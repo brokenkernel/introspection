@@ -1,3 +1,4 @@
+import com.android.build.api.dsl.ApplicationExtension
 import com.android.build.api.dsl.VariantDimension
 import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
 import java.io.IOException
@@ -40,7 +41,7 @@ private inline fun <reified ValueT> VariantDimension.buildConfigField(name: Stri
     buildConfigField(ValueT::class.java.simpleName, name, resolvedValue)
 }
 
-android {
+configure<ApplicationExtension> {
     namespace = "com.brokenkernel.introspection"
     compileSdk = 36
 
@@ -93,14 +94,16 @@ android {
         compose = true
         buildConfig = true
     }
-    composeCompiler {
-        includeSourceInformation = true
-        includeTraceMarkers = true
-        featureFlags = setOf()
-    }
+
     lint {
         baseline = file("lint-baseline.xml")
     }
+}
+
+composeCompiler {
+    includeSourceInformation = true
+    includeTraceMarkers = true
+    featureFlags = setOf()
 }
 
 kotlin {
