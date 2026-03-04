@@ -8,7 +8,6 @@ plugins {
     alias(libs.plugins.dependencyAnalysis)
     alias(libs.plugins.google.gms.google.services) apply false
     alias(libs.plugins.jetbrains.kotlin.jvm) apply false
-    alias(libs.plugins.kotlin.android) apply false
     alias(libs.plugins.kotlin.compose) apply false
     alias(libs.plugins.kotlin.serialization) apply false
     alias(libs.plugins.ksp) apply false
@@ -17,5 +16,5 @@ plugins {
     alias(libs.plugins.sortDependencies) apply false
     alias(libs.plugins.versionCatalogUpdate)
     alias(libs.plugins.versions) apply false
-    kotlin("plugin.power-assert") version "2.2.0" apply false
+    kotlin("plugin.power-assert") version "2.3.10" apply false
 }
