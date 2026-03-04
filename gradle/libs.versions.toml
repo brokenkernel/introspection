@@ -31,7 +31,7 @@ navigationSafeArgsGenerator = "2.9.4"
 protobuf = "0.9.5"
 slackLintChecks = "0.11.0"
 sortDependencies = "0.15"
-versionCatalogUpdate = "1.0.0"
+versionCatalogUpdate = "1.1.0"
 versions = "0.52.0"
 
 [libraries]

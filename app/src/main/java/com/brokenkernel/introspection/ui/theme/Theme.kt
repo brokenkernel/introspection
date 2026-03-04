@@ -48,6 +48,7 @@ internal fun IntrospectionTheme(
             }
 
             darkTheme -> DarkColorScheme
+
             else -> LightColorScheme
         }
 
