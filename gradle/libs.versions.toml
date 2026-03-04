@@ -30,7 +30,7 @@ protobuf = "0.9.5"
 slackLintChecks = "0.11.0"
 sortDependencies = "0.16"
 versionCatalogUpdate = "1.1.0"
-versions = "0.52.0"
+versions = "0.53.0"
 
 [libraries]
 aboutlibraries-compose-m3 = { module = "com.mikepenz:aboutlibraries-compose-m3", version.ref = "aboutLibraries" }
