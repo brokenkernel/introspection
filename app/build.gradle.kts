@@ -15,6 +15,7 @@ plugins {
     alias(libs.plugins.sortDependencies)
     alias(libs.plugins.ktlint)
     alias(libs.plugins.versions)
+    alias(libs.plugins.aboutLibrariesAndroid)
 }
 
 val keystoreProperties: Properties = Properties()
