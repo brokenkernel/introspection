@@ -11,5 +11,6 @@ bundle exec fastlane update_plugins
 )
 
 ./gradlew dependencyUpdates
+./gradlew versionCatalogUpdate --check
 ./gradlew versionCatalogFormat
 ./gradlew sortDependencies
