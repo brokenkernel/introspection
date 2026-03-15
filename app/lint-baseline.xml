@@ -2,28 +2,6 @@
 <issues format="6" by="lint 9.1.0" type="baseline" client="gradle" dependencies="false" name="AGP (9.1.0)" variant="all" version="9.1.0">
 
     <issue
-        id="AndroidGradlePluginVersion"
-        message="A newer version of Gradle than 9.4.0-rc-1 is available: 9.4.0"
-        errorLine1="distributionUrl=https\://services.gradle.org/distributions/gradle-9.4.0-rc-1-all.zip"
-        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="$HOME/svn/android/introspection/gradle/wrapper/gradle-wrapper.properties"
-            line="3"
-            column="17"/>
-    </issue>
-
-    <issue
-        id="NewerVersionAvailable"
-        message="A newer version of org.jlleitschuh.gradle.ktlint than 14.0.1 is available: 14.2.0"
-        errorLine1="ktlint = &quot;14.0.1&quot;"
-        errorLine2="         ~~~~~~~~">
-        <location
-            file="$HOME/svn/android/introspection/gradle/libs.versions.toml"
-            line="22"
-            column="10"/>
-    </issue>
-
-    <issue
         id="UnusedResources"
         message="The resource `R.drawable.outline_eyeglasses_2_sound_24` appears to be unused"
         errorLine1="&lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot; android:height=&quot;24dp&quot; android:tint=&quot;#275861&quot; android:viewportHeight=&quot;960&quot; android:viewportWidth=&quot;960&quot; android:width=&quot;24dp&quot;>"
