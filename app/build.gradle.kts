@@ -1,6 +1,5 @@
 import com.android.build.api.dsl.ApplicationExtension
 import com.android.build.api.dsl.VariantDimension
-import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
 import java.io.IOException
 import java.util.Properties
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
@@ -14,7 +13,6 @@ plugins {
     alias(libs.plugins.protobuf)
     alias(libs.plugins.sortDependencies)
     alias(libs.plugins.ktlint)
-    alias(libs.plugins.versions)
     alias(libs.plugins.aboutLibrariesAndroid)
 }
 
@@ -148,19 +146,7 @@ dependencies {
     lintChecks(libs.slack.lint.checks)
 }
 
-tasks.withType<DependencyUpdatesTask> {
-    rejectVersionIf {
-        isNonStable(candidate.version) && !isNonStable(currentVersion)
-    }
-}
 
 ktlint {
     version.set("1.8.0")
-}
-
-fun isNonStable(version: String): Boolean {
-    val stableKeyword = listOf("RELEASE", "FINAL", "GA").any { version.uppercase().contains(it) }
-    val regex = "^[0-9,.v-]+(-r)?$".toRegex()
-    val isStable = stableKeyword || regex.matches(version)
-    return isStable.not()
 }

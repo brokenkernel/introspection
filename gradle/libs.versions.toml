@@ -30,7 +30,6 @@ protobuf = "0.9.6"
 slackLintChecks = "0.11.1"
 sortDependencies = "0.16"
 versionCatalogUpdate = "1.1.0"
-versions = "0.53.0"
 
 [libraries]
 aboutlibraries-compose-m3 = { module = "com.mikepenz:aboutlibraries-compose-m3", version.ref = "aboutLibraries" }
@@ -86,4 +85,3 @@ ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint" }
 protobuf = { id = "com.google.protobuf", version.ref = "protobuf" }
 sortDependencies = { id = "com.squareup.sort-dependencies", version.ref = "sortDependencies" }
 versionCatalogUpdate = { id = "nl.littlerobots.version-catalog-update", version.ref = "versionCatalogUpdate" }
-versions = { id = "com.github.ben-manes.versions", version.ref = "versions" }

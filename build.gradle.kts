@@ -15,7 +15,6 @@ plugins {
     alias(libs.plugins.protobuf) apply false
     alias(libs.plugins.sortDependencies) apply false
     alias(libs.plugins.versionCatalogUpdate)
-    alias(libs.plugins.versions) apply false
     alias(libs.plugins.aboutLibrariesAndroid) apply false
     kotlin("plugin.power-assert") version "2.3.10" apply false
 }
