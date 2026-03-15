@@ -146,7 +146,6 @@ dependencies {
     lintChecks(libs.slack.lint.checks)
 }
 
-
 ktlint {
     version.set("1.8.0")
 }
