@@ -10,7 +10,6 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.ksp)
-    alias(libs.plugins.protobuf)
     alias(libs.plugins.sortDependencies)
     alias(libs.plugins.ktlint)
     alias(libs.plugins.aboutLibrariesAndroid)
