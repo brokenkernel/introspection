@@ -7,7 +7,6 @@ composeBom = "2026.03.00"
 composeDestinations = "2.3.0"
 coreKtx = "1.18.0"
 daggerVersion = "2.59.2"
-dependencyAnalysis = "3.6.1"
 espressoCore = "3.7.0"
 googleGmsGoogleServices = "4.4.4"
 hilt = "2.59.2"
@@ -74,7 +73,6 @@ android-application = { id = "com.android.application", version.ref = "agp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 android-lint = { id = "com.android.lint", version.ref = "agp" }
 dagger-hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
-dependencyAnalysis = { id = "com.autonomousapps.dependency-analysis", version.ref = "dependencyAnalysis" }
 google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }
 jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
