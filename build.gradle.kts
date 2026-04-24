@@ -14,5 +14,5 @@ plugins {
     alias(libs.plugins.sortDependencies) apply false
     alias(libs.plugins.versionCatalogUpdate)
     alias(libs.plugins.aboutLibrariesAndroid) apply false
-    kotlin("plugin.power-assert") version "2.3.20" apply false
+    kotlin("plugin.power-assert") version "2.3.21" apply false
 }
