@@ -1,8 +1,5 @@
 #!/usr/bin/env zsh
 
-./gradlew sortDependencies
-./gradlew versionCatalogFormat
-./gradlew ktlintFormat
-./gradlew ktlintGenerateBaseline
-./gradlew updateLintBaseline
-./gradlew lint
+./gradlew sortDependencies versionCatalogFormat ktlintFormat
+./gradlew ktlintGenerateBaseline updateLintBaseline detektBaseline
+./gradlew lint projectHealth

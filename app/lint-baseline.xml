@@ -46,61 +46,6 @@
     </issue>
 
     <issue
-        id="NewerVersionAvailable"
-        message="A newer version of com.mikepenz.aboutlibraries.plugin than 14.0.1 is available: 15.2.0"
-        errorLine1="aboutLibraries = &quot;14.0.1&quot;"
-        errorLine2="                 ~~~~~~~~">
-        <location
-            file="$HOME/svn/android/introspection/gradle/libs.versions.toml"
-            line="2"
-            column="18"/>
-    </issue>
-
-    <issue
-        id="NewerVersionAvailable"
-        message="A newer version of com.mikepenz.aboutlibraries.plugin.android than 14.0.1 is available: 15.2.0"
-        errorLine1="aboutLibraries = &quot;14.0.1&quot;"
-        errorLine2="                 ~~~~~~~~">
-        <location
-            file="$HOME/svn/android/introspection/gradle/libs.versions.toml"
-            line="2"
-            column="18"/>
-    </issue>
-
-    <issue
-        id="NewerVersionAvailable"
-        message="A newer version of com.mikepenz:aboutlibraries-compose-core than 14.0.1 is available: 15.2.0"
-        errorLine1="aboutLibraries = &quot;14.0.1&quot;"
-        errorLine2="                 ~~~~~~~~">
-        <location
-            file="$HOME/svn/android/introspection/gradle/libs.versions.toml"
-            line="2"
-            column="18"/>
-    </issue>
-
-    <issue
-        id="NewerVersionAvailable"
-        message="A newer version of com.mikepenz:aboutlibraries-compose-m3 than 14.0.1 is available: 15.2.0"
-        errorLine1="aboutLibraries = &quot;14.0.1&quot;"
-        errorLine2="                 ~~~~~~~~">
-        <location
-            file="$HOME/svn/android/introspection/gradle/libs.versions.toml"
-            line="2"
-            column="18"/>
-    </issue>
-
-    <issue
-        id="NewerVersionAvailable"
-        message="A newer version of com.mikepenz:aboutlibraries-core than 14.0.1 is available: 15.2.0"
-        errorLine1="aboutLibraries = &quot;14.0.1&quot;"
-        errorLine2="                 ~~~~~~~~">
-        <location
-            file="$HOME/svn/android/introspection/gradle/libs.versions.toml"
-            line="2"
-            column="18"/>
-    </issue>
-
-    <issue
         id="UnusedResources"
         message="The resource `R.drawable.outline_eyeglasses_2_sound_24` appears to be unused"
         errorLine1="&lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot; android:height=&quot;24dp&quot; android:tint=&quot;#275861&quot; android:viewportHeight=&quot;960&quot; android:viewportWidth=&quot;960&quot; android:width=&quot;24dp&quot;>"
