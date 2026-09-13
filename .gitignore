@@ -18,3 +18,4 @@ fastlane/README.md
 fastlane/metadata/
 fastlane/report.xml
 keystore.properties
+gradle/gradle-daemon-jvm.properties
