@@ -45,7 +45,7 @@ configure<ApplicationExtension> {
     defaultConfig {
         applicationId = "com.brokenkernel.introspection"
         minSdk = 26
-        targetSdk = 36
+        targetSdk = 37
         versionCode = 16
         versionName = "0.0.$versionCode"
 

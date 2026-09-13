@@ -35,17 +35,6 @@
     </issue>
 
     <issue
-        id="OldTargetApi"
-        message="Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the `android.os.Build.VERSION_CODES` javadoc for details."
-        errorLine1="        targetSdk = 36"
-        errorLine2="        ~~~~~~~~~~~~~~">
-        <location
-            file="build.gradle.kts"
-            line="48"
-            column="9"/>
-    </issue>
-
-    <issue
         id="UnusedResources"
         message="The resource `R.drawable.outline_eyeglasses_2_sound_24` appears to be unused"
         errorLine1="&lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot; android:height=&quot;24dp&quot; android:tint=&quot;#275861&quot; android:viewportHeight=&quot;960&quot; android:viewportWidth=&quot;960&quot; android:width=&quot;24dp&quot;>"
