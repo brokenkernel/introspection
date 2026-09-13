@@ -1,21 +1,16 @@
 package com.brokenkernel.introspection.infrastructure
 
+import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Build
-import androidx.compose.material.icons.filled.Camera
-import androidx.compose.material.icons.filled.Copyright
-import androidx.compose.material.icons.filled.Info
-import androidx.compose.ui.graphics.vector.ImageVector
 import com.brokenkernel.introspection.R
 
 internal enum class IntrospectionDestinations(
     @param:StringRes val label: Int,
-    val icon: ImageVector,
+    @DrawableRes val icon: Int,
     @param:StringRes val contentDescription: Int,
 ) {
-    BUILD(R.string.build, Icons.Default.Build, R.string.build),
-    CAMERA2(R.string.camera, Icons.Default.Camera, R.string.camera),
-    ABOUT(R.string.about, Icons.Default.Info, R.string.about),
-    LIBRARIES(R.string.licences, Icons.Default.Copyright, R.string.licences),
+    BUILD(R.string.build, R.drawable.build_24px, R.string.build),
+    CAMERA2(R.string.camera, R.drawable.camera_24px, R.string.camera),
+    ABOUT(R.string.about, R.drawable.info_24px, R.string.about),
+    LIBRARIES(R.string.licences, R.drawable.license_24px, R.string.licences),
 }

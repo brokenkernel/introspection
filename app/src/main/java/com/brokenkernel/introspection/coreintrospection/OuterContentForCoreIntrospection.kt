@@ -10,6 +10,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import com.brokenkernel.introspection.aboutapp.AboutTab
 import com.brokenkernel.introspection.aboutapp.LibrariesTab
@@ -25,7 +26,7 @@ internal fun MasterScaffold(modifier: Modifier = Modifier) {
                 item(
                     icon = {
                         Icon(
-                            it.icon,
+                            painter = painterResource(id = it.icon),
                             contentDescription = stringResource(it.contentDescription),
                         )
                     },
