@@ -56,15 +56,4 @@
             column="1"/>
     </issue>
 
-    <issue
-        id="NotShrinkingResources"
-        message="If enabling minification, also set isShrinkResources = true"
-        errorLine1="            isMinifyEnabled = true"
-        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="build.gradle.kts"
-            line="68"
-            column="13"/>
-    </issue>
-
 </issues>

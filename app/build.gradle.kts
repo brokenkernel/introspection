@@ -66,6 +66,7 @@ configure<ApplicationExtension> {
     buildTypes {
         release {
             isMinifyEnabled = true
+            isShrinkResources = true
             if (successfulLoadProperties) {
                 signingConfig = signingConfigs.getByName("config")
             }
