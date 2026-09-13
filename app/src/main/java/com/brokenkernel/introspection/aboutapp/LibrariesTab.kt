@@ -6,18 +6,21 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import com.brokenkernel.introspection.R
 import com.mikepenz.aboutlibraries.ui.compose.android.produceLibraries
-import com.mikepenz.aboutlibraries.ui.compose.android.rememberLibraries
 import com.mikepenz.aboutlibraries.ui.compose.m3.LibrariesContainer
+import com.mikepenz.aboutlibraries.ui.compose.variant.LibraryBadges
 
 @Composable
 internal fun LibrariesTab(modifier: Modifier = Modifier) {
     val libraries by produceLibraries(R.raw.aboutlibraries)
     LibrariesContainer(
         modifier = modifier.fillMaxSize(),
-        showAuthor = true,
-        showDescription = true,
-        showVersion = true,
-        showLicenseBadges = true,
+        badges = LibraryBadges(
+            version = true,
+            author = true,
+            description = true,
+            license = true,
+            funding = true,
+        ),
         libraries = libraries,
     )
 }
