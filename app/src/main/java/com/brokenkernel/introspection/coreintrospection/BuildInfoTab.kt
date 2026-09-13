@@ -24,10 +24,10 @@ import androidx.compose.ui.platform.LocalClipboard
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.toClipEntry
 import androidx.compose.ui.text.AnnotatedString
-import kotlinx.coroutines.launch
 import java.lang.reflect.Field
 import kotlin.reflect.KClass
 import kotlin.reflect.full.memberProperties
+import kotlinx.coroutines.launch
 
 @Composable
 internal fun BuildInfoTab(modifier: Modifier = Modifier) {
