@@ -40,7 +40,7 @@ private inline fun <reified ValueT> VariantDimension.buildConfigField(name: Stri
 
 configure<ApplicationExtension> {
     namespace = "com.brokenkernel.introspection"
-    compileSdk = 36
+    compileSdk = 37
 
     defaultConfig {
         applicationId = "com.brokenkernel.introspection"
